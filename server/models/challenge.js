@@ -8,16 +8,13 @@ var mongoose = require('mongoose');
 var challengeModel = function () {
 
         var ChallengeSchema = mongoose.Schema({
-            babaCreator: { type: Schema.Types.ObjectId, ref: 'User' }
+            babaCreator: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
             badges: [{title: String}],
             timerStart: { type: Date, default: Date.now },
             inProgress: Boolean
         });
 
-        userSchema.plugin(findOrCreate);
-
-
-        return mongoose.model('Challenge', challengeSchema);
+        return mongoose.model('Challenge', ChallengeSchema);
     };
 
 module.exports = new challengeModel();

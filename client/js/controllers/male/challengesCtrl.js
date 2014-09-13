@@ -18,21 +18,5 @@ if (typeof window.angular !== 'undefined') {
       $state.transitionTo("challenge", {chId: id});
     }
 
-    $scope.challenges = [
-      {
-        members: [
-
-        ],
-        _id: "23432493dsad",
-        baba-creator: "3424234dsa34d34asd",
-        timer-start: "ISOTime",
-        badges: [
-          "strength", "money", "beer"
-        ],
-        inProgress: false,
-        finished:
-      },
-    ]
-
   }]);
 }
