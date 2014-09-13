@@ -12,7 +12,7 @@ var db = function () {
          * @param conf
          */
         config: function (conf) {
-            mongoose.connect('mongodb://' + conf.host + '/' + conf.database);
+            mongoose.connect(conf.url);
             var db = mongoose.connection;
             db.on('error', console.error.bind(console, 'connection error:'));
             db.once('open', function callback() {
