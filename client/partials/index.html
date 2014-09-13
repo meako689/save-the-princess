@@ -1,0 +1,12 @@
+<div class="mainViewsContainer" ng-controller="homeCtrl">
+  <div ng-show="showSpinner">
+    <h1>App is loading</h1>
+  </div>
+  <div ng-show="appState.is('challenges')"
+       ng-include="'partials/male/challenges.html'" ng-controller="challengesCtrl">
+  </div>
+  <div ng-show="appState.is('challenge')"
+       ng-include="'partials/male/challenge.html'" ng-controller="challengeCtrl">
+  </div>
+</div>
+
