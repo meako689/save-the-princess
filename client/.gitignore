@@ -4,3 +4,6 @@
 node_modules/
 platforms/
 plugins/
+
+.sass-cache/
+style.css.map
