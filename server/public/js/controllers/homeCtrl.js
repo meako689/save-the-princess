@@ -15,7 +15,7 @@ if (typeof window.angular !== 'undefined') {
 
         // init profile
 
-        $restangular.all("user").get().then(function(account){
+        $restangular.one("user").get().then(function(account){
           if(account){
             var appGenderVersionRoute = (account.gender === "male" ? "challenges" : "profile" );
 
