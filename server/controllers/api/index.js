@@ -2,10 +2,14 @@
 
 
 var ChallengeModel = require('../../models/challenge');
+var UserModel = require('../../models/user');
+
 
 
 
 module.exports = function (router) {
+
+    // Challenge API
 
 
     router.get('/challenges', function (req, res) {
@@ -49,6 +53,14 @@ module.exports = function (router) {
         })
     });
 
+    // User API
+
+    router.get('/user', function (req, res) {
+      if(!req.user){
+        res.redirect("/");
+      }
+      res.json(req.user);
+    });
 
 
 };
