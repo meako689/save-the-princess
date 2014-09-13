@@ -44,10 +44,11 @@
     "localizr": "~0.1.0",
     "less": "~1.7.0",
     "mongoose": "~3.8.8",
-    "bcrypt": "^0.7.7",
     "passport": "^0.2.0",
     "passport-local": "^1.0.0",
-    "connect-flash": "^0.1.1"
+    "passport-facebook": "^1.0.3",
+    "connect-flash": "^0.1.1",
+    "mongoose-findorcreate": "^0.1.2"
   },
   "devDependencies": {
     "mocha": "^1.18.0",

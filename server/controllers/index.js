@@ -21,12 +21,16 @@ module.exports = function (router) {
         res.render('profile', profilemodel);
     });
 
+    router.get('/app', function(req, res) {
+        res.render('app');
+    });
+
     /**
      * Allow the users to log out
      */
     router.get('/logout', function (req, res) {
         req.logout();
-        res.redirect('/login');
+        res.redirect('/');
     });
 
 };

@@ -71,10 +71,10 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
 
   $urlRouterProvider.otherwise(mainPageUrl);
 
-//      var config = window.vms ? window.vms.config : null;
-//      if (config) {
-//        $restangularProvider.setBaseUrl(config.backendUrl);
-//      }
+  // $restangularProvider.setBaseUrl("http://save-the-princess-lviv.herokuapp.com/api/");
+  $restangularProvider.setBaseUrl("192.168.100.13:8000/api/");
+
+
 
 });
 

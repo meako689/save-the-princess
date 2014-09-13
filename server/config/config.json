@@ -28,12 +28,12 @@
         "fallback": "en-US"
     },
     "databaseConfig": {
-        "host": "localhost",
-        "database": "findThePrincess"
-    },
-
-    "bcrypt": {
-        "difficulty": 8
+        "local":{
+            "url":"mongodb://localhost/findThePrincess"
+        },
+        "cloud":{
+            "url":"mongodb://princess:saveme@kahana.mongohq.com:10074/meako-db"
+        }
     },
 
     "middleware": {

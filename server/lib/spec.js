@@ -1,6 +1,7 @@
 'use strict';
 var FACEBOOK_APP_ID = '1462699280677867';
 var FACEBOOK_APP_SECRET ='76d5521fc4a59e5f34f95014ec46f331';
+var FACEBOOK_CALLBACK_URL ="/login/fb/callback";
 
 var express = require('express'),
     passport = require('passport'),
@@ -14,14 +15,17 @@ module.exports = function spec(app) {
         //Tell passport to use our newly created local strategy for authentication
         //passport.use(auth.localStrategy());
         //Give passport a way to serialize and deserialize a user. In this case, by the user's id.
+        debugger;
         passport.use(new FacebookStrategy({
             clientID: FACEBOOK_APP_ID,
             clientSecret: FACEBOOK_APP_SECRET,
-            callbackURL: "http://localhost:8000/login/fb/callback", //TODO
-            enableProof: false
+            callbackURL: FACEBOOK_CALLBACK_URL,
+            enableProof: false,
+            profileFields: ['id', 'displayName', 'picture.type(large)','link', 'gender']
           },
           function(accessToken, refreshToken, profile, done) {
-            userLib.findOrCreate(profile, function (err, user) {
+
+            userLib.findOrCreate(profile,function (err, user) {
               return done(err, user);
             });
           }
@@ -34,9 +38,11 @@ module.exports = function spec(app) {
     return {
         onconfig: function(config, next) {
 
-            var dbConfig = config.get('databaseConfig'),
-                cryptConfig = config.get('bcrypt');
-            
+          if (process.env.HEROKU){
+            var dbConfig = config.get('databaseConfig').cloud;
+          }else{
+            var dbConfig = config.get('databaseConfig').local;
+          }
             db.config(dbConfig);
             next(null, config);
         }

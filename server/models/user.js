@@ -9,6 +9,9 @@ var userModel = function () {
 
         var userSchema = mongoose.Schema({
             name: String,
+            gender: String,
+            photoUrl: String,
+            facebookProfile:String,
             facebookId: { type: String, unique: true },
         });
 

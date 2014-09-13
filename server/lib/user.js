@@ -5,12 +5,13 @@ var User = require('../models/user');
 var UserLibrary = function() {
     return {
         findOrCreate: function (profile, done) {
-          console.log(profile);
           User.findOrCreate({
             facebookId:profile.id
           }, function (err, user, created) {
-            debugger;
             user.name = profile.displayName;
+            user.gender = profile.gender;
+            user.facebookProfile = profile.profileUrl;
+            user.photoUrl = profile.photos[0].value;
             user.save();
             return done(err, user); 
           });
