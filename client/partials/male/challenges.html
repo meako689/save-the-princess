@@ -1,3 +1,5 @@
+<div class="challenges">
+
 <header>
   <h3>Challenges</h3>
 </header>
@@ -5,14 +7,19 @@
 <div class="challenges">
   <ul>
     <li ng-repeat="item in challenges" ng-click="showChallenge(item._id)">
-      <img class="rounded pull-left">
+      <img src="http://u.kanobu.ru/ugc/6e17c56a-26a6-4acd-b12e-b53506b1868d.jpg" class="rounded pull-left">
       <ul>
         <li ng-repeat="badge in item.badges">
-
         </li>
       </ul>
+    </div>
 
-    </li>
-  </ul>
+    <div class="time">
+        <i class="icon-time"></i> 2h.
+    </div>
+
+    <div class="well">
+        <a href="javascript:void(0);" class="btn btn-primary btn-lg btn-block">Совершить подвиги</a>
+    </div>
+
 </div>
-<a class="btn btn-large">Apply</a>
