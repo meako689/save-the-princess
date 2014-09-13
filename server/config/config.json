@@ -29,12 +29,10 @@
     },
     "databaseConfig": {
         "local":{
-            "host": "localhost",
-            "database": "findThePrincess"
+            "url":"mongodb://localhost/findThePrincess"
         },
         "cloud":{
-            "host": "localhost",
-            "database": "findThePrincess"
+            "url":"mongodb://princess:saveme@kahana.mongohq.com:10074/meako-db"
         }
     },
 
