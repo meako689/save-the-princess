@@ -12,7 +12,7 @@ if (typeof window.angular !== 'undefined') {
 
       $scope.challenges = items;
 
-    }))
+    });
 
     $scope.showChallenge = function(id){
       $state.transitionTo("challenge", {chId: id});
