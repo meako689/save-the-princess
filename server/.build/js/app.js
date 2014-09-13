@@ -1,4 +1,4 @@
-window.app = angular.module('app', ['ui.router', 'restangular', 'appControllers', 'appServices']);
+window.app = angular.module('app', ['ui.router', 'restangular', 'appControllers']);
 
 app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
 
@@ -72,7 +72,7 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
   $urlRouterProvider.otherwise(mainPageUrl);
 
   // $restangularProvider.setBaseUrl("http://save-the-princess-lviv.herokuapp.com/api/");
-  RestangularProvider.setBaseUrl("192.168.100.13:8000/api/");
+  RestangularProvider.setBaseUrl("http://localhost:8000/api/");
 
 
 });

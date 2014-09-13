@@ -17,19 +17,16 @@
   <script src="http://code.angularjs.org/1.2.24/angular.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
 
-  <script src="components/lodash/dist/lodash.min.js"></script>
-  <script src="components/restangular/dist/restangular.min.js"></script>
-  <script src="components/lodash/dist/lodash.min.js"></script>
-  <script src="components/angular-touch/angular-touch.min.js"></script>
+  <script src="/components/lodash/dist/lodash.min.js"></script>
+  <script src="/components/restangular/dist/restangular.min.js"></script>
+  <script src="/components/lodash/dist/lodash.min.js"></script>
+  <script src="/components/angular-touch/angular-touch.min.js"></script>
 
-  <script src="js/services/usersDS.js"></script>
-  <script src="js/services/challengesDS.js"></script>
+  <script src="/js/controllers/homeCtrl.js"></script>
+  <script src="/js/controllers/male/challengesCtrl.js"></script>
+  <script src="/js/controllers/male/challengeCtrl.js"></script>
 
-  <script src="js/controllers/homeCtrl.js"></script>
-  <script src="js/controllers/male/challengesCtrl.js"></script>
-  <script src="js/controllers/male/challengeCtrl.js"></script>
-
-  <script src="js/app.js"></script>
+  <script src="/js/app.js"></script>
 </head>
 <nav role="navigation" class="navbar navbar-default horizontal-gradient">
     <div class="container">

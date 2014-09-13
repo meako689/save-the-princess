@@ -6,9 +6,9 @@ if (typeof window.angular !== 'undefined') {
     angular.appControllers = angular.module('appControllers', []);
   }
 
-  angular.appControllers.controller('challengesCtrl', ['$scope', '$rootScope', 'challengesDS','$state', function ($scope, $rootScope, challengesDS, $state) {
+  angular.appControllers.controller('challengesCtrl', ['$scope', '$rootScope', '$state','Restangular', function ($scope, $rootScope, $state, $restangular) {
 
-    challengesDS.getChallenges().then(function(items){
+    $restangular.all("challenges").getList().then(function(items){
 
       $scope.challenges = items;
 
