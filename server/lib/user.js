@@ -9,6 +9,8 @@ var UserLibrary = function() {
             facebookId:profile.id
           }, function (err, user, created) {
             user.name = profile.displayName;
+            user.gender = profile.gender;
+            user.facebookProfile = profile.profileUrl;
             user.photoUrl = profile.photos[0].value;
             user.save();
             return done(err, user); 
