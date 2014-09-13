@@ -21,7 +21,7 @@ module.exports = function spec(app) {
             clientSecret: FACEBOOK_APP_SECRET,
             callbackURL: FACEBOOK_CALLBACK_URL,
             enableProof: false,
-            profileFields: ['id', 'displayName', 'picture.type(large)','link']
+            profileFields: ['id', 'displayName', 'picture.type(large)','link', 'gender']
           },
           function(accessToken, refreshToken, profile, done) {
 

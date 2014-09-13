@@ -16,7 +16,7 @@ module.exports = function (router) {
     router.get('/', 
       passport.authenticate('facebook', { failureRedirect: '/login' }),
       function(req, res) {
-        res.redirect('/');
+        res.redirect('/app');
     });
     /**
      * Receive the login credentials and authenticate.
