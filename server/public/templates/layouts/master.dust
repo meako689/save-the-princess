@@ -18,7 +18,7 @@
                     {#user}
                          <a href="/logout">Logout</a>
                     {:else}
-                         <a href="/login">Login</a>
+                         <a href="/login/fb">Login</a>
                     {/user}
                 </li>
             </ul>

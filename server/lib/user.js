@@ -4,24 +4,16 @@ var User = require('../models/user');
 
 var UserLibrary = function() {
     return {
-        addUsers: function() { //add two users
-            var u1 = new User({
-                name: 'Kraken McSquid',
-                login: 'kraken',
-                password: 'kraken',
-                role: 'admin'
-            });
-
-            var u2 = new User({
-                name: 'Ash Williams',
-                login: 'ash',
-                password: 'ash',
-                role: 'user'
-            });
-
-            //Ignore errors. In this case, the errors will be for duplicate keys as we run this app more than once.
-            u1.save();
-            u2.save();
+        findOrCreate: function (profile, done) {
+          console.log(profile);
+          User.findOrCreate({
+            facebookId:profile.id
+          }, function (err, user, created) {
+            debugger;
+            user.name = profile.displayName;
+            user.save();
+            return done(err, user); 
+          });
         },
         serialize: function(user, done) {
             done(null, user.id);

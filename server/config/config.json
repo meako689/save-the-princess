@@ -29,7 +29,7 @@
     },
     "databaseConfig": {
         "host": "localhost",
-        "database": "krakenNextPassport"
+        "database": "findThePrincess"
     },
 
     "bcrypt": {
