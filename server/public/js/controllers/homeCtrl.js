@@ -6,7 +6,7 @@ if (typeof window.angular !== 'undefined') {
     angular.appControllers = angular.module('appControllers', []);
   }
 
-  angular.appControllers.controller('homeCtrl', ['$scope', '$rootScope', '$state', 'usersDS', function ($scope, $rootScope, $state, usersDS) {
+  angular.appControllers.controller('homeCtrl', ['$scope', '$rootScope', '$state', 'Restangular', function ($scope, $rootScope, $state, $restangular) {
 
     console.log("home")
 
@@ -15,7 +15,7 @@ if (typeof window.angular !== 'undefined') {
 
         // init profile
 
-        userDS.getAccount().then(function(account){
+        $restangular.all("user").get().then(function(account){
           if(account){
             var appGenderVersionRoute = (account.gender === "male" ? "challenges" : "profile" );
 

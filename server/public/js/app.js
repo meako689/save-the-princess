@@ -1,4 +1,4 @@
-window.app = angular.module('app', ['ui.router', 'restangular', 'appControllers']);
+window.app = angular.module('app', ['ui.router', 'restangular', 'appControllers', 'appServices']);
 
 app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
 
@@ -41,10 +41,10 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
       templateUrl: 'partials/female/profile.html'
     })
 
-    .state('profile.firstTime', {
-      url: '/female/profile/:profileId/first-time',
-      templateUrl: 'partials/female/profile.first-time.html'
-    })
+    // .state('profile.firstTime', {
+    //   url: '/female/profile/:profileId/first-time',
+    //   templateUrl: 'partials/female/profile.first-time.html'
+    // })
 
     .state('challenge.personalityFemale', {
       url: '/female/challenge/',
@@ -72,8 +72,7 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
   $urlRouterProvider.otherwise(mainPageUrl);
 
   // $restangularProvider.setBaseUrl("http://save-the-princess-lviv.herokuapp.com/api/");
-  $restangularProvider.setBaseUrl("192.168.100.13:8000/api/");
-
+  RestangularProvider.setBaseUrl("192.168.100.13:8000/api/");
 
 
 });
