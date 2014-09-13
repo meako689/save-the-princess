@@ -9,8 +9,8 @@ var UserLibrary = function() {
           User.findOrCreate({
             facebookId:profile.id
           }, function (err, user, created) {
-            debugger;
             user.name = profile.displayName;
+            user.photoUrl = profile.photos[0].value;
             user.save();
             return done(err, user); 
           });

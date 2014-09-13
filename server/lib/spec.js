@@ -18,10 +18,12 @@ module.exports = function spec(app) {
             clientID: FACEBOOK_APP_ID,
             clientSecret: FACEBOOK_APP_SECRET,
             callbackURL: "http://localhost:8000/login/fb/callback", //TODO
-            enableProof: false
+            enableProof: false,
+            profileFields: ['id', 'displayName', 'picture.type(large)','link']
           },
           function(accessToken, refreshToken, profile, done) {
-            userLib.findOrCreate(profile, function (err, user) {
+
+            userLib.findOrCreate(profile,function (err, user) {
               return done(err, user);
             });
           }
@@ -34,9 +36,11 @@ module.exports = function spec(app) {
     return {
         onconfig: function(config, next) {
 
-            var dbConfig = config.get('databaseConfig'),
-                cryptConfig = config.get('bcrypt');
-            
+          if (process.env.HEROKU){
+            var dbConfig = config.get('databaseConfig').cloud;
+          }else{
+            var dbConfig = config.get('databaseConfig').local;
+          }
             db.config(dbConfig);
             next(null, config);
         }
