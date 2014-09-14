@@ -24,6 +24,24 @@ if (typeof window.angular !== 'undefined') {
       }
     });
 
+    $scope.progress = 0;
+    var i = 0;
+
+    $scope.apply = function(){
+      $scope.progress += 33.333333333333;
+      $scope.challenge.steps[i].done = true;
+      i+= 1;
+      $scope.challenge.steps[i].active = true;
+
+    }
+
+    $scope.$watch("progress", function(val){
+      if(val && val > 99.99){
+        console.log("done");
+        $state.transitionTo("main.challenge.finishedMale");
+      }
+    })
+
 
   }]);
 }
