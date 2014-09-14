@@ -35,12 +35,10 @@ module.exports = function (router) {
 
 
     router.get('/challenge/:id', function (req, res) {
-
         ChallengeModel.find({_id: req.params.id }).populate("babaCreator").exec(function(err, item){
           res.json(item)
         })
     });
-
 
     router.post('/challenge/:id/apply', function (req, res) {
         ChallengeModel.findOne({_id: req.params.id }, function(err, item){
@@ -54,7 +52,7 @@ module.exports = function (router) {
     });
 
     router.get('/challenge/male/current', function (req, res) {
-        ChallengeModel.find({members: req.user._id}).populate("steps").exec(function(err, item){
+        ChallengeModel.find({members: req.user._id, inProgress:true}).populate("steps").exec(function(err, item){
           res.json(item)
         })
     });

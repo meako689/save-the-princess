@@ -19,7 +19,7 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
 
     .state('login', {
       url: '/login',
-      template: "<h1>Please log in!!!</h1>"
+      template: "<a href='/login/fb'>Please log in!!!</a>"
     })
 
     // MALE VIEWS //
@@ -43,7 +43,7 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
     // FEMALE VIEWS //
 
     .state('main.profile', {
-      url: '/female/main/',
+      url: '/female/main',
     })
 
     // .state('profile.firstTime', {
