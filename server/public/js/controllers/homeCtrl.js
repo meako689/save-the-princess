@@ -34,13 +34,13 @@ if (typeof window.angular !== 'undefined') {
     // $scope begin
     //
 
-
-    $scope.newAccountModel = {
-      email: "",
-      firstName: "",
-      lastName: "",
-      role: ""
-    };
+    //
+    // $scope.newAccountModel = {
+    //   email: "",
+    //   firstName: "",
+    //   lastName: "",
+    //   role: ""
+    // };
 
 
 //    $scope.createAccount = function () {
