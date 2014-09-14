@@ -38,7 +38,6 @@ if (typeof window.angular !== 'undefined') {
 
       $http({method: 'POST', url: '/api/challenge/' + $scope.x._id + '/apply'})
         .success(function(data, status, headers, config) {
-          debugger;
 
           console.log(data);
 

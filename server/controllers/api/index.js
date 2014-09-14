@@ -42,6 +42,8 @@ module.exports = function (router) {
 
     router.post('/challenge/:id/apply', function (req, res) {
         ChallengeModel.findOne({_id: req.params.id }, function(err, item){
+          console.log(req.user._id);
+          console.log(item);
           item.members.push(req.user._id);
           item.inProgress = true;
 
@@ -52,7 +54,7 @@ module.exports = function (router) {
     });
 
     router.get('/challenge/male/current', function (req, res) {
-        ChallengeModel.find({members: req.user._id, inProgress:true}).populate("steps").exec(function(err, item){
+        ChallengeModel.find({members: req.user, inProgress:true}).populate("steps").exec(function(err, item){
           res.json(item)
         })
     });
