@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript">
-    if (window.location.hash && window.location.hash == '#_=_') {
-        window.location.hash = '';
-    }
-</script>
 
   <!-- CSS (load bootstrap) -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/main.css"/>
+  <link rel="stylesheet" href="css/main.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic' rel='stylesheet' type='text/css'>
   <style>
     .navbar {
@@ -41,19 +36,18 @@
             </button>
             <a href="/" class="navbar-brand">
 
-                <img height="55" alt="Princess" src="/img/princess.png">
-                <span>Save the princess</span>
+                <img width="123" height="43" alt="Ionic Framework" src="//ionicframework.com/img/ionic-logo-white.svg">
 
             </a>
         </div>
 
         <div class="navbar-collapse navbar-ex1-collapse collapse" style="height: 0px;">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="javascript:void(0);" class="nav-link">Main</a></li>
-                <li><a href="javascript:void(0);" class="nav-link">Challenges</a></li>
-                <li><a href="javascript:void(0);" class="nav-link">Statistics</a></li>
-                <li><a href="javascript:void(0);" class="nav-link">Settings</a></li>
-                <li><a href="javascript:void(0);" class="nav-link">Logout</a></li>
+                <li><a href="javascript:void(0);" class="nav-link">Главная</a></li>
+                <li><a href="javascript:void(0);" class="nav-link">Челенжи</a></li>
+                <li><a href="javascript:void(0);" class="nav-link">Статистика</a></li>
+                <li><a href="javascript:void(0);" class="nav-link">Настройки</a></li>
+                <li><a href="javascript:void(0);" class="nav-link">Выйти</a></li>
             </ul>
         </div>
     </div>
