@@ -1,12 +1,25 @@
 <div ng-controller="challengeCtrl">
-  <header>
-    <h3>Виктория</h3>
-  </header>
   <div class="avatar">
-    <img src="" class="rounded" />
+    <img ng-src="{{ challenge.babaCreator.phoyoUrl }}" class="img-rounded" />
+    <h3>{{ challenge.babaCreator.name }}</h3>
   </div>
-    <ul class="badges ">
+  {{ challenge}}
+    <ul class="badges">
       <li class="badges-item"></li>
     </ul>
   <a class="btn btn-large">Apply</a>
+
+  <style>
+    .avatar {
+      color: #ddd;
+      margin: 0;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .avatar img {
+      height: 200px;
+      width: 200px;
+    }
+  </style>
 </div>
