@@ -7,7 +7,9 @@ var challengeModel = function () {
             babaCreator: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
             badges: [{title: String}],
             timerStart: { type: Date, default: Date.now },
-            inProgress: Boolean
+            inProgress: Boolean,
+            members: [{type: mongoose.Schema.Types.ObjectId, ref: 'User'}],
+            steps: [{type: mongoose.Schema.Types.ObjectId, ref: 'Step'}],
         });
 
         return mongoose.model('Challenge', ChallengeSchema);

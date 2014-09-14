@@ -39,10 +39,13 @@ module.exports = function spec(app) {
 
           if (process.env.HEROKU){
             var dbConfig = config.get('databaseConfig').cloud;
+            console.log('Using cloud mongo');
           }else{
             var dbConfig = config.get('databaseConfig').local;
+            console.log('Using local mongo');
           }
             db.config(dbConfig);
+            userLib.addAllTheShit();
             next(null, config);
         }
     };

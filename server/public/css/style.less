@@ -7,6 +7,17 @@
   font-weight: 300;
   font-size: 16px;
 }
+.navbar-brand {
+  padding: 0px;
+  padding-left: 10px;
+}
+.navbar-brand span{
+  color:#fff;
+}
+.navbar {
+  border: none;
+}
+
 //
 //!-- Успешный логин. Челенж не запущен. -->
 //<div class="female_profile_first">
@@ -21,9 +32,89 @@
 //</div>
 //</div>
 
+.title {
+  wont-weight: 300;
+  font-size: 30px;
+  text-align:center;
+  margin-bottom:20px;
+}
+.icon-photo {
+  /*display:block;
+  margin:0px auto;
+  background-image: url('../img/ico/icon_476.svg');
+  width: 36px;
+  height: 28px;
+  background-size: 36px 28px;
+  fill: #fff;*/
+}
 .female_profile_first {
   background: #ecc768;
-  overflow: hidden;
+  width: 400px;
+  margin:0px auto;
+  padding: 20px 20px 20px 20px;
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+
+  .avatar_big {
+    width: 230px;
+    margin:0px auto;
+    text-aling:center;
+
+    img { border: 3px solid #cccccc;}
+
+
+  }
+}
+.female_challenges_choice .challenge_block .challenge_item.selected {
+  background: rgba(57, 113, 158, 0.14)
+}
+.female_challenges_choice {
+
+  .challenge_block {
+
+    margin-bottom: 20px;
+
+    .challenge_item{
+      border-bottom: 1px solid #8e8bae;
+      padding: 5px 20px;
+      display:block;
+      font-weight: 300;
+      font-size: 18px;
+      overflow:hidden;
+
+      .ci_row_first {
+        width: 80px;
+        float: left;
+      }
+      .ci_row_second {
+        padding: 15px 0px;
+        margin-left:90px;
+      }
+
+
+
+    }
+    .challenge_item:hover {
+      background-color: #f7f7f7;
+
+    }
+    .challenge_description_strong {
+      display: block;
+      text-align: center;
+      font-weight: 700;
+      font-size:1.2em;
+    }
+  }
+}
+.challenge_ico04,.challenge_ico01,.challenge_ico02,.challenge_ico03 {
+  display: block;
+  margin:0px auto;
+  background-image: url('../img/ico/icon_20442.svg');
+  width: 70px;
+  height: 60px;
+  background-size: 70px 60px;
 }
 
 //<!-- Успешный логин. Есть запущенный челенж. -->
