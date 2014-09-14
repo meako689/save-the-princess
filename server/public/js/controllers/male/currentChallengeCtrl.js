@@ -6,22 +6,26 @@ if (typeof window.angular !== 'undefined') {
     angular.appControllers = angular.module('appControllers', []);
   }
 
-  angular.appControllers.controller('currentChallengeCtrl', ['$scope', '$rootScope', '$state','Restangular', function ($scope, $rootScope, $state, $restangular) {
+  angular.appControllers.controller('currentChallengeCtrl', ['$scope', '$rootScope', '$state', '$http', function ($scope, $rootScope, $state, $http) {
+
+    function fetchCurrentChallenge(){
+      $http({method: 'GET', url: '/api/challenge/male/current'})
+        .success(function(data, status, headers, config) {
+          debugger;
+
+          $scope.challenge = data;
+
+      });
+    }
+
+    fetchCurrentChallenge();
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
-
-      if (toState.name === "challenge.currentMale") {
-        $restangular.one("challenge").customGET("male/current").then(function(item){
-          $scope.challenge = item;
-        })
+      if (toState.name === "main.challenge.currentMale" && !$scope.challenge) {
+        fetchCurrentChallenge();
       }
     });
 
-    $scope.applyChallenge = function(){
-      $restangular.one("challenge", challengeId).customGET("apply").then(function(resp){
-        debugger;
-      })
-    }
 
   }]);
 }
