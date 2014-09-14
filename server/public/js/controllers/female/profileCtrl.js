@@ -8,15 +8,18 @@ if (typeof window.angular !== 'undefined') {
 
   angular.appControllers.controller('profileCtrl', ['$scope', '$rootScope', '$state', '$http', function ($scope, $rootScope, $state, $http) {
 
-    $http({method: 'GET', url: '/api/user'})
-      .success(function(data, status, headers, config) {
-        $scope.account = data;
-    });
+    $scope.renderGirl function renderGirl(){
+      $http({method: 'GET', url: '/api/user'})
+        .success(function(data, status, headers, config) {
+          $scope.account = data;
+      });
+    }
+    $scope.renderGirl();
 
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
       if (!$scope.account){
-        renderGirl();
+        $scope.renderGirl();
       }
     });
 
