@@ -17,8 +17,9 @@ if (typeof window.angular !== 'undefined') {
         $http({method: 'GET', url: '/api/challenge/' + challengeId})
           .success(function(data, status, headers, config) {
 
-            $scope.challenge = data;
+            $rootScope.x = data[0];
             console.log(data);
+            debugger;
 
         });
 
