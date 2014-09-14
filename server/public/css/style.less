@@ -102,7 +102,7 @@
     }
     .challenge_description_strong {
       display: block;
-      text-align: center;
+      text-align: left;
       font-weight: 700;
       font-size:1.2em;
     }
@@ -116,7 +116,15 @@
   height: 60px;
   background-size: 70px 60px;
 }
-
+.challenge_ico01 {
+  background-image: url('../img/ico/icon_4754.svg');
+}
+.challenge_ico02 {
+  background-image: url('../img/ico/icon_38468.svg');
+}
+.challenge_ico04 {
+  background-image: url('../img/ico/icon_476.svg');
+}
 //<!-- Успешный логин. Есть запущенный челенж. -->
 //<div class="female_main">
 //
@@ -169,6 +177,46 @@
 //</ul>
 //</div>
 //
+.female_challenges_start {
+  .fake_bg {
+    height:900px;
+    padding-top: 400px;
+  }
+  .chellenge_on_photo_btn {
+
+    i {
+      display: block;
+
+//      border:px solid #0086B3;
+      float: left;
+      margin-left: 20px;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+    .row {
+      width: 310px;
+      margin: 0px auto;
+      background-color: #fff;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      padding: 15px 10px 10px 10px;
+    }
+  }
+  .btn-primary {
+    width: 300px;
+    height: 60px;
+    display:block;
+    margin:0px auto;
+    padding-top: 15px;
+    font-weight: 300px;
+    font-size: 20px;
+  }
+  .btn-primary:hover {
+    background: #1d9099 ;
+  }
+}
 //<!-- Подтверждение и публикация -->
 //<div class="female_challenges_start">
 //<div class="fake_bg" style="background-image: url('../img/photo01.jpg');">
@@ -186,6 +234,34 @@
 //</div>
 //
 //
+.female_challenge_info {
+
+}
+.palyer_table {
+
+  .player_item {
+    border-bottom: 1px solid #aeaeae;
+    overflow:hidden;
+    .img {
+      float:left;
+      width: 120px;
+      height: 150px;
+    }
+    .player_challenges {
+      margin-left: 160px;
+      text-align: left;
+      padding-top: 30px;
+    }
+    i {
+      float: left;
+      margin-right: 15px;
+    }
+    .disable {
+      opacity: 0.1;
+    }
+  }
+
+}
 //<!-- Лисn принцев в челенже  -->
 //<div class="female_challenge_info">
 //<div class="title">All players in your challenge</div>
