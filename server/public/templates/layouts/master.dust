@@ -7,29 +7,7 @@
     <link rel="stylesheet" href="/css/main.css"/>
 </head>
 <body class="nm-np">
-<header class="grey">
-    <div class="wrapper">
-        <h1>Kraken Central</h1>
-        <nav>
-            <ul class="nm-np inline">
-                <li><a href="/">Home</a></li>
-                <li><a href="/profile">Profile</a></li>
-                <li><a href="/admin">Admin</a></li>
-                <li>
-                    {#user}
-                         <a href="/logout">Logout</a>
-                    {:else}
-                         <a href="/login/fb">Login</a>
-                    {/user}
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<div class="wrapper">
-    {+body /}
-</div>
+{+body /}
 <div id="tentacle"></div>
 </body>
 </html>

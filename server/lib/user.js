@@ -10,6 +10,7 @@ var UserLibrary = function() {
           User.findOrCreate({
             facebookId:profile.id
           }, function (err, user, created) {
+            user.login = profile.id;
             user.name = profile.displayName;
             user.gender = profile.gender;
             user.facebookProfile = profile.profileUrl;
@@ -41,14 +42,16 @@ var UserLibrary = function() {
                   name: 'Radistca Cat',
                   gender: 'feemale',
                   photoUrl: 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/c18.0.160.160/p160x160/1932275_1474894039392391_1236078164_n.jpg?oh=4c423e8d8dd7379cd0135eab328cc58b&oe=54C8213F&__gda__=1419153586_fd54fcb6e5564d9c2852dcde58417f87',
-                  facebookProfile: '100006154267456',
+                  facebookId: '1000061542666',
+                  login:'aaa',
               });
 
               var girl2 = new User({
                   name: 'Vika',
                   gender: 'feemale',
                   photoUrl: 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/c41.0.160.160/p160x160/10157391_736452286407014_7894460211160651227_n.jpg?oh=64d65f93d3f05a400220f996368e2b00&oe=54CFF7BB&__gda__=1418935931_43e10fc7dfc92d2155892a15c58ad9fb',
-                  facebookProfile: '100006154267456',
+                  facebookId: '1000061542',
+                  login:'bbb',
               });
 
               //Ignore errors. In this case, the errors will be for duplicate keys as we run this app more than once.

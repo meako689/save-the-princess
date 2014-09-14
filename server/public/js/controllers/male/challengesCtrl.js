@@ -6,11 +6,13 @@ if (typeof window.angular !== 'undefined') {
     angular.appControllers = angular.module('appControllers', []);
   }
 
-  angular.appControllers.controller('challengesCtrl', ['$scope', '$rootScope', '$state','Restangular', function ($scope, $rootScope, $state, $restangular) {
+  angular.appControllers.controller('challengesCtrl', ['$scope', '$rootScope', '$state','Restangular','$http', function ($scope, $rootScope, $state, $restangular, $http) {
 
-    $restangular.all("challenges").getList().then(function(items){
+    $http({method: 'GET', url: '/api/challenges'})
+      .success(function(data, status, headers, config) {
 
-      $scope.challenges = items;
+        $scope.items = data;
+        console.log(data);
 
     });
 

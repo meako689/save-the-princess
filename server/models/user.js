@@ -7,6 +7,7 @@ var mongoose = require('mongoose'),
 
 var userModel = function () {
         var userSchema = mongoose.Schema({
+            login: { type: String, unique: true },
             name: String,
             gender: String,
             photoUrl: String,

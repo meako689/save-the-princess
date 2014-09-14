@@ -106,7 +106,8 @@ window.app.run(['$rootScope', '$state', '$http', '$templateCache', '$timeout', '
 
       [
         '/partials/male/challenges.html',
-        '/partials/male/challenge.html'
+        '/partials/male/challenge.html',
+        '/partials/male/challenge.current.html'
 
       ].forEach(function (partial) {
           var deferred = $q.defer();

@@ -11,7 +11,7 @@ if (typeof window.angular !== 'undefined') {
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
 
       if (toState.name === "challenge.currentMale") {
-        $restangular.one("challenge", challengeId).get().then(function(item){
+        $restangular.one("challenge").customGET("male/current").then(function(item){
           $scope.challenge = item;
         })
       }
