@@ -53,7 +53,7 @@ module.exports = function (router) {
     });
 
     router.get('/challenge/male/current', function (req, res) {
-        ChallengeModel.findOne({members: req.user, inProgress:true}).populate("steps").exec(function(err, item){
+        ChallengeModel.findOne({members: req.user, inProgress:true}).populate("steps").populate("babaCreator").exec(function(err, item){
           res.json(item)
         })
     });
