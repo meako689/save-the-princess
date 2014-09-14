@@ -53,6 +53,13 @@ module.exports = function (router) {
         })
     });
 
+    router.get('/challenge/male/current', function (req, res) {
+
+        ChallengeModel.find({members: req.user._id}).exec(function(err, item){
+          res.json(item)
+        })
+    });
+
     // Steps
 
     router.get('/steps/:challenge_id', function (req, res) {
