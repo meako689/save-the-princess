@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <title>{+title /}</title>
-    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/main.css"/>
 </head>
 <body class="nm-np">
 {+body /}

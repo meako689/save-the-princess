@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript">
-    if (window.location.hash && window.location.hash == '#_=_') {
-        window.location.hash = '';
-    }
-</script>
 
   <!-- CSS (load bootstrap) -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/main.css"/>
+  <link rel="stylesheet" href="css/main.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic' rel='stylesheet' type='text/css'>
   <style>
     .navbar {
@@ -19,20 +14,17 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <!-- JS (load angular, ui-router, and our custom js file) -->
-  <script src="/components/angular/angular.min.js"></script>
+  <script src="http://code.angularjs.org/1.2.24/angular.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
 
   <script src="/components/lodash/dist/lodash.min.js"></script>
   <script src="/components/restangular/dist/restangular.min.js"></script>
   <script src="/components/lodash/dist/lodash.min.js"></script>
   <script src="/components/angular-touch/angular-touch.min.js"></script>
-  <script src="/components/angular-animate/angular-animate.min.js"></script>
-
 
   <script src="/js/controllers/homeCtrl.js"></script>
   <script src="/js/controllers/male/challengesCtrl.js"></script>
   <script src="/js/controllers/male/challengeCtrl.js"></script>
-  <script src="/js/controllers/male/currentChallengeCtrl.js"></script>
 
   <script src="/js/app.js"></script>
 </head>
@@ -44,19 +36,18 @@
             </button>
             <a href="/" class="navbar-brand">
 
-                <img height="55" alt="Princess" src="/img/princess.png">
-                <span>Save the princess</span>
+                <img width="123" height="43" alt="Ionic Framework" src="//ionicframework.com/img/ionic-logo-white.svg">
 
             </a>
         </div>
 
         <div class="navbar-collapse navbar-ex1-collapse collapse" style="height: 0px;">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="javascript:void(0);" class="nav-link">Main</a></li>
-                <li><a href="javascript:void(0);" class="nav-link">Challenges</a></li>
-                <li><a href="javascript:void(0);" class="nav-link">Statistics</a></li>
-                <li><a href="javascript:void(0);" class="nav-link">Settings</a></li>
-                <li><a href="javascript:void(0);" class="nav-link">Logout</a></li>
+                <li><a href="javascript:void(0);" class="nav-link">Главная</a></li>
+                <li><a href="javascript:void(0);" class="nav-link">Челенжи</a></li>
+                <li><a href="javascript:void(0);" class="nav-link">Статистика</a></li>
+                <li><a href="javascript:void(0);" class="nav-link">Настройки</a></li>
+                <li><a href="javascript:void(0);" class="nav-link">Выйти</a></li>
             </ul>
         </div>
     </div>
