@@ -12,15 +12,9 @@
     }
 
    </style>
-   <div>
-    <img id="logo" src="/img/logo.jpg"/>
-    <br>
-    <h3>Врятуй принцесу</h3>
-    <br>
-    <br>
-    <br>
-    <a href="/login/fb">
-      <img src="/img/facebook.png" style="width: 318px/>
+   <div style="background: url('/img/logo.jpg') center top no-repeat; height: 640px; overflow:hidden;">
+    <a href="/login/fb" style="margin:330px 0 0 32px; display:block;">
+      <img src="/img/facebook.png" style="width: 318px;"/>
     </a>
    </div>
 
