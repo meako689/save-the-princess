@@ -21,7 +21,7 @@ if (typeof window.angular !== 'undefined') {
     });
 
     $scope.createChallenge = function(){
-      $rootScope.$state.transitionTo("main.challenge.female.createChallenge");
+      $state.transitionTo("main.createChallenge");
     };
 
 
