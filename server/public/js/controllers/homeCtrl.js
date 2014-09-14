@@ -17,7 +17,7 @@ if (typeof window.angular !== 'undefined') {
 
         $restangular.one("user").get().then(function(account){
           if(account){
-            var appGenderVersionRoute = (account.gender === "male" ? "challenges" : "profile" );
+            var appGenderVersionRoute = (account.gender === "male" ? "challenges" : (account.gender === "female" ? "profile" : "about") );
 
             $rootScope.showSpinner = false;
 

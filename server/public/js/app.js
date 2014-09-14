@@ -9,36 +9,36 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
     // HOME STATES AND NESTED VIEWS ========================================
     .state('home', {
       url: '/home',
-      templateUrl: 'partials/index.html'
+      templateUrl: '/partials/index.html'
     })
 
     // MALE VIEWS //
 
     .state('challenges', {
       url: '/male/challenges',
-      templateUrl: 'partials/male/challenges.html'
+      templateUrl: '/partials/male/challenges.html'
     })
 
     .state('challenge', {
       url: '/male/challenge/:chId',
-      templateUrl: 'partials/male/challenge.html'
+      templateUrl: '/partials/male/challenge.html'
     })
 
     .state('challenge.currentMale', {
       url: '/male/challenges/current',
-      templateUrl: 'partials/male/challenge.current.html'
+      templateUrl: '/partials/male/challenge.current.html'
     })
 
     .state('challenge.finishedMale', {
       url: '/male/challenges/finished',
-      templateUrl: 'partials/male/challenge.finished.html'
+      templateUrl: '/partials/male/challenge.finished.html'
     })
 
     // FEMALE VIEWS //
 
     .state('profile', {
       url: '/female/main/',
-      templateUrl: 'partials/female/profile.html'
+      templateUrl: '/partials/female/profile.html'
     })
 
     // .state('profile.firstTime', {
@@ -48,22 +48,22 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
 
     .state('challenge.personalityFemale', {
       url: '/female/challenge/',
-      templateUrl: 'partials/female/challenge.personality.html'
+      templateUrl: '/partials/female/challenge.personality.html'
     })
 
     .state('challenge.stepsFemale', {
       url: '/female/challenge/steps',
-      templateUrl: 'partials/female/challenge.steps.html'
+      templateUrl: '/partials/female/challenge.steps.html'
     })
 
     .state('challenge.currentFemale', {
       url: '/female/challenge/current',
-      templateUrl: 'partials/female/challenge.current.html'
+      templateUrl: '/partials/female/challenge.current.html'
     })
 
     .state('challenge.finishedFemale', {
       url: '/female/challenges/finished',
-      templateUrl: 'partials/female/challenge.finished.html'
+      templateUrl: '/partials/female/challenge.finished.html'
     });
 
 
@@ -100,8 +100,8 @@ window.app.run(['$rootScope', '$state', '$http', '$templateCache', '$timeout', '
       var promises = [];
 
       [
-        'partials/male/challenges.html',
-        'partials/male/challenge.html'
+        '/partials/male/challenges.html',
+        '/partials/male/challenge.html'
 
       ].forEach(function (partial) {
           var deferred = $q.defer();
