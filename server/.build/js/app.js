@@ -32,21 +32,18 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
       url: '/male/challenge/:chId'
     })
 
-    .state('challenge.currentMale', {
+    .state('main.challenge.currentMale', {
       url: '/male/challenges/current',
-      templateUrl: '/partials/male/challenge.current.html'
     })
 
-    .state('challenge.finishedMale', {
+    .state('main.challenge.finishedMale', {
       url: '/male/challenges/finished',
-      templateUrl: '/partials/male/challenge.finished.html'
     })
 
     // FEMALE VIEWS //
 
-    .state('profile', {
+    .state('main.profile', {
       url: '/female/main/',
-      templateUrl: '/partials/female/profile.html'
     })
 
     // .state('profile.firstTime', {
@@ -54,24 +51,20 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
     //   templateUrl: 'partials/female/profile.first-time.html'
     // })
 
-    .state('challenge.personalityFemale', {
+    .state('main.challenge.personalityFemale', {
       url: '/female/challenge/',
-      templateUrl: '/partials/female/challenge.personality.html'
     })
 
-    .state('challenge.stepsFemale', {
+    .state('main.challenge.stepsFemale', {
       url: '/female/challenge/steps',
-      templateUrl: '/partials/female/challenge.steps.html'
     })
 
-    .state('challenge.currentFemale', {
+    .state('main.challenge.currentFemale', {
       url: '/female/challenge/current',
-      templateUrl: '/partials/female/challenge.current.html'
     })
 
-    .state('challenge.finishedFemale', {
+    .state('main.challenge.finishedFemale', {
       url: '/female/challenges/finished',
-      templateUrl: '/partials/female/challenge.finished.html'
     });
 
 

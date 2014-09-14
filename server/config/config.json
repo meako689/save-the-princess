@@ -103,6 +103,21 @@
                 "name":"path:./lib/auth",
                 "method": "injectUser"
             }
+        },
+        "appsec": {
+          "enabled": true,
+          "priority": 110,
+          "module": {
+            "name": "lusca",
+            "arguments": [
+              {
+                "csrf": false,
+                "xframe": "SAMEORIGIN",
+                "p3p": false,
+                "csp": false
+              }
+            ]
+          }
         }
     }
 

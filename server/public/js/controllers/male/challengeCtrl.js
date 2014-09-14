@@ -27,15 +27,23 @@ if (typeof window.angular !== 'undefined') {
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
       if (fromState.name === "main.challenge") {
-        $rootScope.x = undefined;
+        $scope.x = undefined;
       }
     });
 
     $scope.applyChallenge = function(){
-      $restangular.one("challenge", challengeId).customGET("apply").then(function(resp){
-        debugger;
-        $rootScope.$state.transitionTo("main.challenge.currentMale");
-      })
+
+      $http({method: 'POST', url: '/api/challenge/' + $scope.x._id + '/apply'})
+        .success(function(data, status, headers, config) {
+          debugger;
+
+          console.log(data);
+
+          $rootScope.$state.transitionTo("main.challenge.currentMale");
+
+      });
+
+
     }
 
   }]);

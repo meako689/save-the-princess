@@ -39,7 +39,7 @@
 <nav role="navigation" class="navbar navbar-default horizontal-gradient">
     <div class="container">
         <div class="navbar-header">
-            <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="navbar-toggle button ionic collapsed" type="button">
+            <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="navbar-toggle button ionic collapsed" type="button" style="padding: 10px 10px; margin-top: 14px;">
                 <i class="icon ion-navicon"></i>
             </button>
             <a href="/" class="navbar-brand">
