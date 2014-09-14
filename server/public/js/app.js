@@ -33,11 +33,11 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
     })
 
     .state('main.challenge.currentMale', {
-      url: '/male/challenges/current',
+      url: '/current',
     })
 
     .state('main.challenge.finishedMale', {
-      url: '/male/challenges/finished',
+      url: '/finished',
     })
 
     // FEMALE VIEWS //

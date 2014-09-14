@@ -11,16 +11,15 @@ if (typeof window.angular !== 'undefined') {
     function fetchCurrentChallenge(){
       $http({method: 'GET', url: '/api/challenge/male/current'})
         .success(function(data, status, headers, config) {
-          debugger;
-
-          $scope.challenge = data.item;
+          console.log("challenge", data);
+          $scope.challenge = data;
       });
     }
 
     fetchCurrentChallenge();
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
-      if (toState.name === "main.challenge.currentMale" && !$scope.challenge) {
+      if (toState.name === "main.challenge.currentMale") {
         fetchCurrentChallenge();
       }
     });
