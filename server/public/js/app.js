@@ -76,7 +76,7 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
   $urlRouterProvider.otherwise(mainPageUrl);
 
   // $restangularProvider.setBaseUrl("http://save-the-princess-lviv.herokuapp.com/api/");
-  RestangularProvider.setBaseUrl("http://localhost:8000/api/");
+  RestangularProvider.setBaseUrl("http://save-the-princess-lviv.herokuapp.com/api/");
 
 
 });
