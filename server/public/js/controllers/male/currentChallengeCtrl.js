@@ -11,8 +11,6 @@ if (typeof window.angular !== 'undefined') {
     function fetchCurrentChallenge(){
       $http({method: 'GET', url: '/api/challenge/male/current'})
         .success(function(data, status, headers, config) {
-          debugger;
-
           $scope.challenge = data.item;
       });
     }

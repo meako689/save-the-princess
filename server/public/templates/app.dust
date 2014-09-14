@@ -34,6 +34,7 @@
   <script src="/js/controllers/male/challengeCtrl.js"></script>
   <script src="/js/controllers/male/currentChallengeCtrl.js"></script>
   <script src="/js/controllers/female/profileCtrl.js"></script>
+  <script src="/js/controllers/female/createChallengeCtrl.js"></script>
 
   <script src="/js/app.js"></script>
 </head>
