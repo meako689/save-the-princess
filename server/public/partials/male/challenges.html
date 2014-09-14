@@ -1,17 +1,15 @@
-<header>
-  <h3>Challenges</h3>
-</header>
+<div class="challenges" ng-controller="challengesCtrl">
 
 <div class="challenges">
   <div ng-if="items.length === 0 || !items">
     Ой, лишенько. Немає нічого!
   </div>
-  {{ items}}
-  <ul>
-    <li ng-repeat="item in items" ng-click="showChallenge(item._id)">
-      <img src="http://u.kanobu.ru/ugc/6e17c56a-26a6-4acd-b12e-b53506b1868d.jpg" class="rounded pull-left">
-      <ul>
+  <ul class="challenges-list list-group">
+    <li ng-repeat="item in items" ng-click="showChallenge(item._id)" class="list-group-item">
+      <img ng-src="{{ item.babaCreator.photoUrl }}" class="img-circle pull-left">
+      <ul class="badges pull-left">
         <li ng-repeat="badge in item.badges">
+          <span class="label label-primary">{{ badge.title }}</span>
         </li>
       </ul>
     </li>
@@ -19,3 +17,28 @@
 </div>
 
 </div>
+
+<style>
+  .challenges-list li {
+    min-height: 75px;
+    padding: 5px 10px;
+  }
+
+  .challenges-list li img {
+    height: 65px;
+    width: 65px;
+  }
+
+  .challenges-list .badges {
+    height: 30px;
+    margin-top: 16px;
+    width: 80%;
+  }
+
+  .challenges-list .badges li {
+    display: inline-block;
+    height: 30px;
+    margin: 0;
+    padding: 3px;
+  }
+</style>
