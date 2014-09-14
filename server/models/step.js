@@ -9,7 +9,7 @@ var stepModel = function () {
             badges: [{title: String}],
             timerStart: { type: Date, default: Date.now },
             timeToComplete: {type: Number, default: 60*30 },//sec
-            completed: {type: Boolean, default: False},
+            completed: {type: Boolean, default: false},
             answerType: String,
             answer: String,
         });
