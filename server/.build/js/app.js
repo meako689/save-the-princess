@@ -6,10 +6,15 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
 
   $stateProvider
 
+  .state('main', {
+    templateUrl: function(stateParams) {
+      return '/partials/index.html';
+    }
+  })
+
     // HOME STATES AND NESTED VIEWS ========================================
-    .state('home', {
-      url: '/home',
-      templateUrl: '/partials/index.html'
+    .state('main.home', {
+      url: '/home'
     })
 
     .state('login', {
@@ -19,14 +24,12 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
 
     // MALE VIEWS //
 
-    .state('challenges', {
-      url: '/male/challenges',
-      templateUrl: '/partials/male/challenges.html'
+    .state('main.challenges', {
+      url: '/male/challenges'
     })
 
-    .state('challenge', {
-      url: '/male/challenge/:chId',
-      templateUrl: '/partials/male/challenge.html'
+    .state('main.challenge', {
+      url: '/male/challenge/:chId'
     })
 
     .state('challenge.currentMale', {

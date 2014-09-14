@@ -17,7 +17,7 @@ if (typeof window.angular !== 'undefined') {
     });
 
     $scope.showChallenge = function(id){
-      $state.transitionTo("challenge", {chId: id});
+      $state.transitionTo("main.challenge", {chId: id});
     }
 
   }]);

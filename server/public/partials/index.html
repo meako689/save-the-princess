@@ -2,13 +2,13 @@
   <div ng-show="showSpinner">
     <h3>App is loading</h3>
   </div>
-  <div ng-show="appState.is('challenges')"
+  <div ng-show="appState.is('main.challenges')" ng-controller="challengesCtrl"
        ng-include="'/partials/male/challenges.html'">
   </div>
-  <div ng-show="appState.is('challenge')"
+  <div ng-show="appState.is('main.challenge')" ng-controller="challengeCtrl"
        ng-include="'/partials/male/challenge.html'">
   </div>
-  <div ng-show="appState.is('challenge.currentMale')"
+  <div ng-show="appState.is('main.challenge.currentMale')" ng-controller="currentChallengeCtrl"
        ng-include="'/partials/male/challenge.current.html'">
   </div>
 </div>
