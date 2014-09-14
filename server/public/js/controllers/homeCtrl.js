@@ -19,7 +19,10 @@ if (typeof window.angular !== 'undefined') {
         $restangular.one("user").get().then(function(account){
           if(account){
 
-            var appGenderVersionRoute = (account.gender === "male" ? "main.challenges" : (account.gender === "female" ? "main.profile" : "login") );
+            var appGenderVersionRoute = (account.gender === "female" ? "main.challenges" : (account.gender === "male" ? "main.profile" : "login") );
+            //var appGenderVersionRoute = (account.gender === "male" ? "main.challenges" : (account.gender === "female" ? "main.profile" : "login") );
+            console.log(account.gender);
+            console.log(appGenderVersionRoute);
 
             window.setTimeout(function(){
               $rootScope.showSpinner = false;
