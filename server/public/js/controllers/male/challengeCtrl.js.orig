@@ -1,0 +1,53 @@
+'use strict';
+
+
+if (typeof window.angular !== 'undefined') {
+  if (typeof angular.appControllers === 'undefined') {
+    angular.appControllers = angular.module('appControllers', []);
+  }
+
+  angular.appControllers.controller('challengeCtrl', ['$scope', '$rootScope', '$state','$http', function ($scope, $rootScope, $state, $http) {
+
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
+<<<<<<< Updated upstream
+      if (toState.name === "main.challenge" && toParams.chId) {
+=======
+      console.log('aa');
+>>>>>>> Stashed changes
+
+        var challengeId = toParams.chId;
+        console.log(challengeId);
+
+<<<<<<< Updated upstream
+        $http({method: 'GET', url: '/api/challenge/' + challengeId})
+          .success(function(data, status, headers, config) {
+=======
+        $restangular.one("challenge", challengeId).get().then(function(item){
+          $scope.challenge = item;
+          console.log(item);
+        })
+>>>>>>> Stashed changes
+
+            $scope.x = data[0];
+            console.log(data);
+
+        });
+
+      }
+    });
+
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
+      if (fromState.name === "main.challenge") {
+        $rootScope.x = undefined;
+      }
+    });
+
+    $scope.applyChallenge = function(){
+      $restangular.one("challenge", challengeId).customGET("apply").then(function(resp){
+        debugger;
+        $rootScope.$state.transitionTo("main.challenge.currentMale");
+      })
+    }
+
+  }]);
+}
