@@ -1,4 +1,15 @@
 <!-- Успешный логин. Есть запущенный челенж. -->
 <div class="female_main" ng-controller="profileCtrl">
+<div class="bl">
+  <br>
+      <h2 style="color: #428bca;">{{ account.name }}</h2>
+  <br>
+  <div class="avatar">
+    <img ng-src="{{ account.photoUrl }}" class="img-circle" />
+  </div>
 
+      <button type="button" class="btn btn-large btn-default" ng-click="createChallenge()">
+        Create challenge</button>
+
+</div>
 </div>

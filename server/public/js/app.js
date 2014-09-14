@@ -43,7 +43,7 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
     // FEMALE VIEWS //
 
     .state('main.profile', {
-      url: '/female/main/',
+      url: '/female/main',
     })
 
     // .state('profile.firstTime', {
