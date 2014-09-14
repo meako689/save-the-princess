@@ -13,8 +13,7 @@ if (typeof window.angular !== 'undefined') {
         .success(function(data, status, headers, config) {
           debugger;
 
-          $scope.challenge = data;
-
+          $scope.challenge = data.item;
       });
     }
 
