@@ -45,6 +45,7 @@ module.exports = function (router) {
     router.post('/challenge/:id/apply', function (req, res) {
 
         ChallengeModel.findOne({_id: req.params.id }, function(err, item){
+          item.members.push(req.user._id);
           item.inProgress = true;
 
           item.save(function(err, item){
