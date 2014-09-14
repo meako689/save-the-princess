@@ -65,6 +65,9 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
 
     .state('main.challenge.finishedFemale', {
       url: '/female/challenges/finished',
+    })
+    .state('main.createChallenge', {
+      url: '/female/challenges/create',
     });
 
 

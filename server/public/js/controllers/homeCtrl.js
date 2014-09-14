@@ -20,7 +20,7 @@ if (typeof window.angular !== 'undefined') {
           if(account){
 
             //switch
-            //female profile
+            /female profile
             //var appGenderVersionRoute = (account.gender === "female" ? "main.challenges" : (account.gender === "male" ? "main.profile" : "login") );
             //male challenges
             var appGenderVersionRoute = (account.gender === "male" ? "main.challenges" : (account.gender === "female" ? "main.profile" : "login") );

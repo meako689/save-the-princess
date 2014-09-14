@@ -16,5 +16,7 @@
   </div>
   <div ng-show="appState.is('main.challenge.finishedMale')"
        ng-include="'/partials/male/challenge.finished.html'">
+  <div ng-show="appState.is('main.createChallenge')" ng-controller="createChallengeCtrl"
+       ng-include="'/partials/female/challenge.create.html'">
   </div>
 </div>
