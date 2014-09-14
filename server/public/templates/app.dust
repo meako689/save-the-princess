@@ -19,13 +19,15 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <!-- JS (load angular, ui-router, and our custom js file) -->
-  <script src="http://code.angularjs.org/1.2.24/angular.js"></script>
+  <script src="/components/angular/angular.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
 
   <script src="/components/lodash/dist/lodash.min.js"></script>
   <script src="/components/restangular/dist/restangular.min.js"></script>
   <script src="/components/lodash/dist/lodash.min.js"></script>
   <script src="/components/angular-touch/angular-touch.min.js"></script>
+  <script src="/components/angular-animate/angular-animate.min.js"></script>
+
 
   <script src="/js/controllers/homeCtrl.js"></script>
   <script src="/js/controllers/male/challengesCtrl.js"></script>

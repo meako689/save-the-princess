@@ -15,13 +15,17 @@ if (typeof window.angular !== 'undefined') {
 
         // init profile
 
+
         $restangular.one("user").get().then(function(account){
           if(account){
-            var appGenderVersionRoute = (account.gender === "male" ? "challenges" : (account.gender === "female" ? "profile" : "about") );
 
-            $rootScope.showSpinner = false;
+            var appGenderVersionRoute = (account.gender === "male" ? "challenges" : (account.gender === "female" ? "profile" : "login") );
 
-            $state.transitionTo(appGenderVersionRoute);
+            window.setTimeout(function(){
+              $rootScope.showSpinner = false;
+              $state.transitionTo(appGenderVersionRoute);
+            }, 300);
+
           }
         });
 
@@ -30,13 +34,13 @@ if (typeof window.angular !== 'undefined') {
     // $scope begin
     //
 
-
-    $scope.newAccountModel = {
-      email: "",
-      firstName: "",
-      lastName: "",
-      role: ""
-    };
+    //
+    // $scope.newAccountModel = {
+    //   email: "",
+    //   firstName: "",
+    //   lastName: "",
+    //   role: ""
+    // };
 
 
 //    $scope.createAccount = function () {
