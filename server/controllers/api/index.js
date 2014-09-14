@@ -42,6 +42,9 @@ module.exports = function (router) {
 
     router.post('/challenge/:id/apply', function (req, res) {
         ChallengeModel.findOne({_id: req.params.id }, function(err, item){
+
+          console.log("acc", item);
+
           item.members.push(req.user._id);
           item.inProgress = true;
 

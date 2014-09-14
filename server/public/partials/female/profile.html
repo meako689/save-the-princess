@@ -1,15 +1,29 @@
-<!-- Успешный логин. Есть запущенный челенж. -->
-<div class="female_main" ng-controller="profileCtrl">
+
+<div class="female_main">
 <div class="bl">
-  <br>
-      <h2 style="color: #428bca;">{{ account.name }}</h2>
-  <br>
+  <h1 style="color: #428bca;">{{ account.name }}</h1>
   <div class="avatar">
     <img ng-src="{{ account.photoUrl }}" class="img-circle" />
   </div>
-
+<br>
+<br>
+<h2>
+  Challenges in progress
+</h2>
+<br>
+<ul class="list-group">
+  <li class="list-group-item">
+    2 participants | 56:34 to end 
+  </li>
+</ul>
       <button type="button" class="btn btn-large btn-default" ng-click="createChallenge()">
         Create challenge</button>
 
 </div>
 </div>
+
+<style>
+  .bl {
+    color: #333
+  }
+</style>

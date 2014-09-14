@@ -6,23 +6,23 @@ if (typeof window.angular !== 'undefined') {
     angular.appControllers = angular.module('appControllers', []);
   }
 
-  angular.appControllers.controller('profileCtrl', ['$scope', '$rootScope', '$state','Restangular', function ($scope, $rootScope, $state, $restangular) {
-    var renderGirl = function renderGirl(){
-      console.log('female rendered');
-        $restangular.one("user").get().then(function(account){
-          $scope.accout = account;
-        });
+  angular.appControllers.controller('profileCtrl', ['$scope', '$rootScope', '$state', '$http', function ($scope, $rootScope, $state, $http) {
 
-      $scope.createChallenge = function(){
-        $rootScope.$state.transitionTo("main.challenge.female.createChallenge");
-      };
-    }
+    $http({method: 'GET', url: '/api/user'})
+      .success(function(data, status, headers, config) {
+        $scope.account = data;
+    });
+
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
       if (!$scope.account){
         renderGirl();
       }
     });
+
+    $scope.createChallenge = function(){
+      $rootScope.$state.transitionTo("main.challenge.female.createChallenge");
+    };
 
 
   }]);
