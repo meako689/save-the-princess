@@ -1,0 +1,194 @@
+<h1>New release information</h1>
+<p>New releases are in Releases section of Github
+<a href="https://github.com/mgonto/restangular/releases">https://github.com/mgonto/restangular/releases</a></p>
+<h1>1.0.11</h1>
+<ul>
+<li>Documentation Typo fixes</li>
+<li>errorInterceptor can now stop Restangular from rejecting the promise</li>
+<li>Bugfix fot method override on DELETE. Now it works</li>
+</ul>
+<h1>1.0.9</h1>
+<ul>
+<li><strong>BREAKING CHANGE</strong>: Restangular methods created with <code>addRestangularMethod</code> will change its signature depending on the opreation. If the operation is safe (GET, OPTIONS, etc.), the signature is methodName(params, headers, elemForBody). If it&#39;s not safe (POST, PUT, etc.), the signature is methodName(elemForBody, params, headers). This is to facilitate using them as when it&#39;s not safe, you&#39;re usually going to set a body</li>
+<li>Now you can configure default request parameters per method and for everything as well</li>
+<li>Added the ability to use Cannonical IDs. They&#39;re used if you need to change Primary Key (ID) of the element (Really weird case).</li>
+<li>If response is null or undefined, the element sent in the request ISN&#39;T used anymore. This is to have clarity of what&#39;s returned by the server and also to fix one bug.</li>
+<li>Added tests</li>
+<li>Fixed bug with ID when it was an empty string</li>
+<li>Added missing &#39;;&#39;.</li>
+</ul>
+<h1>1.0.7</h1>
+<ul>
+<li><code>baseUrl</code> can now be set either with or without ending <code>/</code> and it&#39;ll work</li>
+</ul>
+<h1>1.0.5</h1>
+<ul>
+<li>Several bug fixes</li>
+<li>Added <code>parentless</code> configuration to ignore nested restful URLs</li>
+</ul>
+<h1>1.0.2</h1>
+<ul>
+<li>First final release</li>
+<li>Added <code>one</code> and <code>all</code> to all collection methods</li>
+<li>Added <code>fullResponse</code> for getting the full <code>$http</code> response in every call</li>
+<li>Improved documentation on <code>addElemTransformer</code></li>
+<li>Configuration can be set globally on either <code>RestangularProvider</code> or <code>Restangular</code></li>
+</ul>
+<h1>0.8.9</h1>
+<ul>
+<li>Fix call to <code>isOverridenMethod</code> in <code>setMethodOverriders</code>.</li>
+</ul>
+<h1>0.8.8</h1>
+<ul>
+<li>Removed extra trailling slash for elements without ID. Thanks @cboden</li>
+</ul>
+<h1>0.8.7</h1>
+<ul>
+<li>Bugfix for Refactor</li>
+</ul>
+<h1>0.8.6</h1>
+<ul>
+<li>Ditched the buggy <code>$resource</code> and using <code>$http</code> inside :D</li>
+</ul>
+<h1>0.8.4</h1>
+<ul>
+<li>Fixed bug with defaultHttpFields for scoped configuration</li>
+<li>Added <code>defaultHeaders</code></li>
+</ul>
+<h1>0.8.3</h1>
+<ul>
+<li>Fixed bug with URLHandler. Now it uses local configuration as well</li>
+<li>Added error interceptor</li>
+<li>Fixed minor bugs</li>
+</ul>
+<h1>0.8.0</h1>
+<ul>
+<li>Big refactor to use scoped configurations</li>
+</ul>
+<h1>0.7.3</h1>
+<ul>
+<li>All configuration can be done via either <code>Restangular</code> or <code>RestangularProvider</code></li>
+<li>url field now is called getRestangularUrl</li>
+<li><code>id</code> configuration from <code>restangularFields</code> now accepts nested (dotted) properties</li>
+</ul>
+<h1>0.7.1</h1>
+<ul>
+<li>Added <code>defaultRequestParams</code> to set default request query parameters</li>
+</ul>
+<h1>0.7.0</h1>
+<ul>
+<li>RequestInterceptor wasn&#39;t being called in getList</li>
+<li>Removed extra <code>/</code> when no restangularWhat is provided. This is fixed by Angular&#39;s team since version 1.1.5 but this fixes it for all versions including 1.0.X</li>
+<li>Added documentation for supported AngularJS versions</li>
+<li>Added url method to elements which returns the URL of the current object</li>
+</ul>
+<h1>0.6.9</h1>
+<ul>
+<li>Wrapping everything in an anonymous self executed function to not expose anything</li>
+</ul>
+<h1>0.6.7</h1>
+<ul>
+<li>Bug fix for a regresion error using _.omit</li>
+<li>Added element transformers to transform any Restangularized element.</li>
+<li>Added putElement method to collection to put a certain element at an index and return a promise of the updated array.</li>
+</ul>
+<h1>0.6.5</h1>
+<ul>
+<li>Added <code>Restangular.copy</code> for copying objects</li>
+</ul>
+<h1>0.6.4</h1>
+<ul>
+<li>added methodOverriders to override any HTTP Method</li>
+<li>Added requestInterceptor</li>
+</ul>
+<h1>0.6.3</h1>
+<ul>
+<li>Added <code>defaultHttpFields</code> configuration property</li>
+</ul>
+<h1>0.6.2</h1>
+<ul>
+<li>URL suffix is unescaped now</li>
+</ul>
+<h1>0.6.1</h1>
+<ul>
+<li>Elements are striped from Restangular fields before being sent to the server</li>
+</ul>
+<h1>0.6.0</h1>
+<ul>
+<li>Fixed bug when adding metadata to response in ResopnseExtractor. It wasn&#39;t being added</li>
+<li>Added enhanced promises. <a href="https://github.com/mgonto/restangular/blob/master/README.md#enhanced-promises">Check the section in README</a>.</li>
+</ul>
+<h1>0.5.5</h1>
+<ul>
+<li>Changed by default from Underscore to Lodash. They both can be used anyway. (thanks @pauldijou)</li>
+<li>Added tests for both Underscore and Lodash to check it&#39;s working. (thanks @pauldijou)</li>
+</ul>
+<h1>0.5.4</h1>
+<ul>
+<li>Added onElemRestangularized hook</li>
+<li>Added posibility to add your own Restangular methods</li>
+</ul>
+<h1>0.5.3</h1>
+<ul>
+<li>Added the posibility to do URL Building and RequestLess tree navigations</li>
+<li>Added alias to <code>do[method]</code>. For example, Now you can do <code>customPOST</code> as well as <code>doPOST</code></li>
+</ul>
+<h1>0.5.2</h1>
+<ul>
+<li>responseExtractor renamed to responseInterceptor. Added alias from responseExtractor to responseInterceptor to mantain backwards compatibility</li>
+<li>responseExtractor now receives 4 parameters. Response, operation, what (path of current element) and URL</li>
+<li>Error function for any Restangular action now receives a response to get StatusCode and other interesting stuff</li>
+</ul>
+<h1>0.5.1</h1>
+<ul>
+<li>Added listTypeIsArray property to set getList as not an array.</li>
+</ul>
+<h1>0.5.0</h1>
+<ul>
+<li>Added <code>requestSuffix</code>configuration for requests ending en .json</li>
+<li><code>what</code> field is now configurable and not hardcoded anymore</li>
+<li>All instance variables from <code>RestangularProvider</code> are now local variables to reduce visibility</li>
+<li>Fully functional version with all desired features</li>
+</ul>
+<h1>0.4.6</h1>
+<ul>
+<li>Added Custom methods to all Restangular objects. Check it out in the README</li>
+</ul>
+<h1>0.4.5</h1>
+<ul>
+<li>Fixed but that didn&#39;t let ID to be 0.</li>
+<li>Added different Collection methods and Element methods</li>
+<li>Added posibility po do a post in a collection to post an element to itself</li>
+<li>Added Travis CI for build</li>
+<li>Fixed bug with parentResource after a post of a new element</li>
+<li>When doing a post, if no element is returned, we enhance the object received as a parameter</li>
+</ul>
+<h1>0.3.4</h1>
+<ul>
+<li>Added new HTTP methods to use: Patch, Head, Trace and Options (thanks @pauldijou)</li>
+<li>Added tests with Karma for all functionality.</li>
+</ul>
+<h1>0.3.3</h1>
+<ul>
+<li>Restangular fields can now be configured. You can set the id, route and parentResource fields. They&#39;re not hardcoded anymore</li>
+</ul>
+<h1>0.3.2</h1>
+<ul>
+<li>Added ResponseExtractor for when the real data is wrapped in an envelope in the WebServer response.</li>
+</ul>
+<h1>0.3.1</h1>
+<ul>
+<li>Now all methods accept Headers. You can query <code>account.getList(&#39;buildings&#39;, {query: &#39;param&#39;}, {&#39;header&#39;: &#39;mine&#39;})</code></li>
+</ul>
+<h1>0.2.1</h1>
+<ul>
+<li>Added query params to all methods. getList, post, put, get and delete accept query params now.</li>
+</ul>
+<h1>0.2.0</h1>
+<ul>
+<li>Added post method to all elements. Now you can also create new elements by calling <code>account.post(&#39;buildings&#39;, {name: &quot;gonto&quot;})</code>. </li>
+</ul>
+<h1>0.1.1</h1>
+<ul>
+<li>Changed <code>elem.delete()</code> to <code>elem.remove()</code> due to errors with Closure Compiler in Play 2 </li>
+</ul>
