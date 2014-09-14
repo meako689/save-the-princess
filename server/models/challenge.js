@@ -8,6 +8,7 @@ var challengeModel = function () {
             badges: [{title: String}],
             timerStart: { type: Date, default: Date.now },
             inProgress: Boolean,
+            members: [{type:Schema.Types.ObjectId, ref: 'User'}],
         });
 
         return mongoose.model('Challenge', ChallengeSchema);
