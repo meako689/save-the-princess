@@ -1,7 +1,18 @@
 {>"layouts/master" /}
 
 {<body}
-    <h1>{@pre type="content" key="greeting"/}</h1>
-    <p>Welcome to the Administrators private club. No users allowed here.</p>
+   <style>
+    div {
+text-align: center;
+}
+    img {
+      width: 70%;
+    }
+
+   </style>
+   <div>
+    <img src="http://www.santiagocasares.com/wp-content/uploads/2012/10/crown_2.jpg"/>
+    <a href="/login/fb">Login with facebook</a>
+   </div>
 
 {/body}

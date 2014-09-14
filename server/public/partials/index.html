@@ -8,4 +8,7 @@
   <div ng-show="appState.is('challenge')"
        ng-include="'/partials/male/challenge.html'" ng-controller="challengeCtrl">
   </div>
+  <div ng-show="appState.is('challenge.currentMale')"
+       ng-include="'/partials/male/challenge.current.html'" ng-controller="currentChallengeCtrl">
+  </div>
 </div>
