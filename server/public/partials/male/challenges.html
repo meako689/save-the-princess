@@ -6,7 +6,7 @@
   </div>
   <ul class="challenges-list list-group">
     <li ng-repeat="item in items" ng-click="showChallenge(item._id)" class="list-group-item">
-      <img ng-src="{{ item.babaCreator.photoUrl }}" class="img-circle pull-left">
+      <img ng-src="{{ item.babaCreator.photoUrl }}" class="img-circle1 pull-left"><img src="/img/profile_mask.png" width="65" height="65" style="position:absolute; margin-left:-65px;" />
       <ul class="badges pull-left">
         <li ng-repeat="badge in item.badges">
           <span class="label label-primary">{{ badge.title }}</span>
