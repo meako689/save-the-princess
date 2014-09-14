@@ -29,7 +29,8 @@
 
   <script src="/js/app.js"></script>
 </head>
-<nav role="navigation" class="navbar navbar-default horizontal-gradient">
+<div class="horizontal-gradient">
+<nav role="navigation" class="navbar navbar-default" style="background:url(/img/header_.png) top repear-y;">
     <div class="container">
         <div class="navbar-header">
             <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="navbar-toggle button ionic collapsed" type="button">
@@ -53,6 +54,7 @@
         </div>
     </div>
 </nav>
+</div>
 <!-- apply our angular app to our site -->
 <body ng-app="app">
 

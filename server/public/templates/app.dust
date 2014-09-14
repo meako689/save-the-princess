@@ -38,16 +38,15 @@
 
   <script src="/js/app.js"></script>
 </head>
-<nav role="navigation" class="navbar navbar-default horizontal-gradient">
-    <div class="container">
+
+<nav role="navigation" class="navbar navbar-default horizontal-gradient" >
+    <div class="container" >
         <div class="navbar-header">
             <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="navbar-toggle button ionic collapsed" type="button" style="padding: 10px 10px; margin-top: 14px;">
                 <i class="icon ion-navicon"></i>
             </button>
             <a href="/" class="navbar-brand">
-                <img height="55" alt="Princess" src="/img/princess.png">
-                <span style="position:absolute;margin: 15px 0 0 10px;">Save the princess</span>
-
+                <img height="62" width="241" alt="Princess" src="/img/header_logo.png" style="position:absolute; margin-top:-10px;">
             </a>
         </div>
 
@@ -62,6 +61,7 @@
         </div>
     </div>
 </nav>
+
 <!-- apply our angular app to our site -->
 <body ng-app="app">
 
