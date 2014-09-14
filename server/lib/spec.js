@@ -15,7 +15,6 @@ module.exports = function spec(app) {
         //Tell passport to use our newly created local strategy for authentication
         //passport.use(auth.localStrategy());
         //Give passport a way to serialize and deserialize a user. In this case, by the user's id.
-        debugger;
         passport.use(new FacebookStrategy({
             clientID: FACEBOOK_APP_ID,
             clientSecret: FACEBOOK_APP_SECRET,

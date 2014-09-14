@@ -1,12 +1,8 @@
-/**
- * A model for our user
- */
 'use strict';
 var mongoose = require('mongoose');
 
 
 var challengeModel = function () {
-
         var ChallengeSchema = mongoose.Schema({
             babaCreator: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
             badges: [{title: String}],
