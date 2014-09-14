@@ -2,7 +2,13 @@
 
 {<body}
    <style>
-   body {background: #fff; color: #000;}
+   body {
+    background: url('/img/logo.jpg');
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+        -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+        -o-background-size: 100%; /* Opera 9.6+ */
+        background-size: 100%; /* Современные браузеры */
+   }
     div {
       text-align: center;
       }
@@ -12,8 +18,9 @@
     }
 
    </style>
-   <div style="background: url('/img/logo.jpg') center top no-repeat; height: 640px; overflow:hidden;">
-    <a href="/login/fb" style="margin:330px 0 0 32px; display:block;">
+   <div style="padding-top:13%; display:block; overflow:hidden;">
+    <img src="/img/index_label.png" />
+    <a href="/login/fb" style="display:block; overflow:hidden;">
       <img src="/img/facebook.png" style="width: 318px;"/>
     </a>
    </div>
