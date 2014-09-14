@@ -45,7 +45,7 @@
             <a href="/" class="navbar-brand">
 
                 <img height="55" alt="Princess" src="/img/princess.png">
-                <span>Save the princess</span>
+                <span style="position:absolute;margin: 15px 0 0 10px;">Save the princess</span>
 
             </a>
         </div>
