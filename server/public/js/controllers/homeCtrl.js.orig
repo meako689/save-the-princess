@@ -19,10 +19,14 @@ if (typeof window.angular !== 'undefined') {
         $restangular.one("user").get().then(function(account){
           if(account){
 
-            //var appGenderVersionRoute = (account.gender === "female" ? "main.challenges" : (account.gender === "male" ? "main.profile" : "login") );
+<<<<<<< Updated upstream
             var appGenderVersionRoute = (account.gender === "male" ? "main.challenges" : (account.gender === "female" ? "main.profile" : "login") );
+=======
+            var appGenderVersionRoute = (account.gender === "female" ? "challenges" : (account.gender === "male" ? "profile" : "login") );
+            //var appGenderVersionRoute = (account.gender === "male" ? "challenges" : (account.gender === "female" ? "profile" : "login") );
             console.log(account.gender);
             console.log(appGenderVersionRoute);
+>>>>>>> Stashed changes
 
             window.setTimeout(function(){
               $rootScope.showSpinner = false;

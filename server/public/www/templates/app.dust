@@ -25,6 +25,7 @@
   <script src="/js/controllers/homeCtrl.js"></script>
   <script src="/js/controllers/male/challengesCtrl.js"></script>
   <script src="/js/controllers/male/challengeCtrl.js"></script>
+  <script src="/js/controllers/female/profileCtrl.js"></script>
 
   <script src="/js/app.js"></script>
 </head>

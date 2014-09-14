@@ -6,21 +6,18 @@ if (typeof window.angular !== 'undefined') {
     angular.appControllers = angular.module('appControllers', []);
   }
 
-  angular.appControllers.controller('challengeCtrl', ['$scope', '$rootScope', '$state','$http', function ($scope, $rootScope, $state, $http) {
+  angular.appControllers.controller('challengeCtrl', ['$scope', '$rootScope', '$state','Restangular', function ($scope, $rootScope, $state, $restangular) {
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
-      if (toState.name === "main.challenge" && toParams.chId) {
 
+      if (toState.name === "challenge" && toParams.chId) {
         var challengeId = toParams.chId;
         console.log(challengeId);
 
-        $http({method: 'GET', url: '/api/challenge/' + challengeId})
-          .success(function(data, status, headers, config) {
-
-            $scope.x = data[0];
-            console.log(data);
-
-        });
+        $restangular.one("challenge", challengeId).get().then(function(item){
+          $scope.challenge = item;
+          console.log(item);
+        })
 
       }
     });
@@ -42,7 +39,6 @@ if (typeof window.angular !== 'undefined') {
           $rootScope.$state.transitionTo("main.challenge.currentMale");
 
       });
-
 
     }
 

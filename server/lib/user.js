@@ -35,8 +35,7 @@ var UserLibrary = function() {
               // body...
             var badges = [{title:'strength'},
                           {title:'intellect'},
-                          {title:'agility'},
-                          {title:'charity'}];
+                          {title:'agility'}];
 
               var girl1 = new User({
                   name: 'Radistca Cat',
