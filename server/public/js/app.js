@@ -12,6 +12,11 @@ app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
       templateUrl: '/partials/index.html'
     })
 
+    .state('login', {
+      url: '/login',
+      template: "<h1>Please log in!!!</h1>"
+    })
+
     // MALE VIEWS //
 
     .state('challenges', {

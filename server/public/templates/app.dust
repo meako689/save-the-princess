@@ -26,6 +26,8 @@
   <script src="/components/restangular/dist/restangular.min.js"></script>
   <script src="/components/lodash/dist/lodash.min.js"></script>
   <script src="/components/angular-touch/angular-touch.min.js"></script>
+  <script src="/components/angular-animate/angular-animate.min.js"></script>
+
 
   <script src="/js/controllers/homeCtrl.js"></script>
   <script src="/js/controllers/male/challengesCtrl.js"></script>
